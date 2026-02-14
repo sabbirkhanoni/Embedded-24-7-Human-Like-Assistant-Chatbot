@@ -8,7 +8,7 @@ export default async function DashboardLayout({
 }>) {
 
     const cookie = await cookies();
-    const metadata = cookie.get("metadata");
+    const metadata = cookie.get("startupdata");
 
   return (
     <div className="min-h-screen flex flex-col from-[#050509] via-[#1a1a1a] to-[#050509] bg-gradient-to-r">

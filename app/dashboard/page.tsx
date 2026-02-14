@@ -2,6 +2,7 @@
 import StartupForm from '@/components/dashboard/StartupForm'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { TrophySpin } from 'react-loading-indicators'
 
 const page = () => {
 
@@ -13,8 +14,8 @@ const page = () => {
     const response = await axios.get(
       "/api/startup/get"
     );
+
     setCheckStartupData(response.data.exists);
-    console.log("Startup data exists:", response.data.exists);
     setLoading(false);
   }
 
@@ -23,9 +24,11 @@ const page = () => {
   }, []);
 
   if (loading) {
-    return <div  className="flex-1 p-4 items-center justify-center w-full h-screen">
-      <p>Loading...</p>
-    </div>;
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <TrophySpin color="#32cd32" size="medium" text="" textColor="" />
+      </div>
+    )
   }
 
 
