@@ -9,3 +9,15 @@ export const user = pgTable("user", {
     image: text("image"),
     created_at: text("created_at").default(sql`now()`),
 });
+
+
+export const startupdata = pgTable("startupdata", {
+    id: text("id").primaryKey().default(sql`gen_random_uuid()`),
+    user_email: text("user_email").notNull(),
+    business_name: text("business_name").notNull(),
+    industry: text("industry").notNull(),
+    description: text("description").notNull(),
+    external_url: text("external_url").notNull(),
+    website: text("website").notNull(),
+    created_at: text("created_at").default(sql`now()`),
+});
