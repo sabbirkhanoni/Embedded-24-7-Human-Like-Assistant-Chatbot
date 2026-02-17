@@ -39,8 +39,7 @@ const page = () => {
             <StartupForm />
           ) : (
             <div>
-              <h2>Startup Data</h2>
-              {/* Render the startup data here */}
+              
             </div>
           )  
         }
