@@ -1,8 +1,9 @@
 "use client"
 import StartupForm from '@/components/dashboard/StartupForm'
-import axios from 'axios'
+import axios, { Axios } from 'axios'
 import React, { useEffect, useState } from 'react'
 import { TrophySpin } from 'react-loading-indicators'
+import AxiosToastError from '../utils/AxiosToastError'
 
 const page = () => {
 
@@ -11,12 +12,16 @@ const page = () => {
 
 
   const getStartupData = async () => {
-    const response = await axios.get(
-      "/api/startup/get"
-    );
-
-    setCheckStartupData(response.data.exists);
-    setLoading(false);
+    try {
+      const response = await axios.get(
+        "/api/startup/get"
+      );
+      setCheckStartupData(response.data.exists);
+    }catch (error) {
+      AxiosToastError(error || "An error occurred while checking startup data.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   useEffect(() => {

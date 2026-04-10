@@ -4,6 +4,7 @@ import Hero from '@/components/landing/hero/index'
 import Docs from '@/components/landing/docs/index'
 import Pricing from '@/components/landing/pricing/index'
 import Footer from '@/components/landing/footer/index'
+import { Toaster } from 'react-hot-toast'
 
 const Page = () => {
   return (
@@ -15,6 +16,22 @@ const Page = () => {
       <Docs />
       <Pricing />
       <Footer />
+
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+        gutter={8}
+        containerStyle={{}}
+        containerClassName=""
+        toastOptions={{
+          duration: 5000,
+          style: {
+            background: "#363636",
+            color: "#fff",
+          },
+        }}
+      />
+      
     </main>
   )
 }

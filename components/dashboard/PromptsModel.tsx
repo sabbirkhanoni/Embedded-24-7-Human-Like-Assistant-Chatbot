@@ -12,6 +12,7 @@ interface PromptsModelProps {
   onImport: (data: any) => Promise<void>
   loading?: boolean
   existingSources: PromptSource[]
+  setModeType: (mode: Mode) => void
 }
 
 type Mode = 'website' | 'text' | 'file'
@@ -25,7 +26,7 @@ const modeConfig = [
 const inputCls =
   'w-full bg-zinc-50 border border-zinc-200 rounded-lg px-3 py-2.5 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:border-zinc-400 focus:bg-white transition-colors'
 
-export default function PromptsModel({ open, setOpen, existingSources , onImport, loading }: PromptsModelProps) {
+export default function PromptsModel({ open, setOpen, existingSources , onImport, loading , setModeType }: PromptsModelProps) {
   const [mode, setMode] = useState<Mode>('website')
   const [importLoading, setImportLoading] = useState(false)
   const close = () => setOpen(false)
@@ -80,13 +81,16 @@ export default function PromptsModel({ open, setOpen, existingSources , onImport
                 setError("Please select a CSV file to upload.");
                 return;
             }
+            
             data.file = file;
         }
+        setModeType(mode);
         await onImport(data);
 
         setWebsiteUrl("");
         setTextTitle("");
         setTextContent("");
+        setMode("website");
         setFile(null);
         setError(null);
    }
