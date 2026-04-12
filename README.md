@@ -1,4 +1,11 @@
-#  Embedded 24/7 Human-Like Assistant Chatbot
+<img width="1920" height="3610" alt="screencapture-embedded-human-like-assistant-vercel-app-2026-04-12-20_57_15" src="https://github.com/user-attachments/assets/7bacaf9b-c4df-442f-914e-2abab5609eb3" />#  Embedded 24/7 Human-Like Assistant Chatbot
+
+## **The installation guide is provided below, after the User Interface (UI) section.**
+
+<img width="1920" height="3610" alt="screencapture-embedded-human-like-assistant-vercel-app-2026-04-12-20_57_15" src="https://github.com/user-attachments/assets/ff8923f6-e795-474c-8137-9510a351c2bd" />
+
+<img width="1920" height="927" alt="screencapture-pichatbot-scalekit-dev-a-auth-login-2026-04-12-20_57_42" src="https://github.com/user-attachments/assets/cf29f57a-67b6-4430-a6fe-a6ea1bd46cf1" />
+
 
 A modern, full-stack AI-powered chatbot application built with **Next.js 16**, **OpenAI**, **Drizzle ORM**, and **Neon PostgreSQL** — designed to deliver a human-like conversational experience around the clock. Secured with **ScaleKit** authentication and styled with **shadcn/ui** and **Tailwind CSS v4**.
 
