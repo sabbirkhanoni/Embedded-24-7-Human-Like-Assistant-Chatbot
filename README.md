@@ -1,4 +1,4 @@
-<img width="1920" height="3610" alt="screencapture-embedded-human-like-assistant-vercel-app-2026-04-12-20_57_15" src="https://github.com/user-attachments/assets/7bacaf9b-c4df-442f-914e-2abab5609eb3" />#  Embedded 24/7 Human-Like Assistant Chatbot
+#  Embedded 24/7 Human-Like Assistant Chatbot
 
 ## **The installation guide is provided below, after the User Interface (UI) section.**
 
