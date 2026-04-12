@@ -1,4 +1,4 @@
-# 🤖 Embedded 24/7 Human-Like Assistant Chatbot
+#  Embedded 24/7 Human-Like Assistant Chatbot
 
 A modern, full-stack AI-powered chatbot application built with **Next.js 16**, **OpenAI**, **Drizzle ORM**, and **Neon PostgreSQL** — designed to deliver a human-like conversational experience around the clock. Secured with **ScaleKit** authentication and styled with **shadcn/ui** and **Tailwind CSS v4**.
 
@@ -6,29 +6,25 @@ A modern, full-stack AI-powered chatbot application built with **Next.js 16**, *
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 This project is a production-ready, embeddable AI assistant chatbot that provides 24/7 intelligent responses with a human-like conversational tone. It is powered by the **OpenAI API** for natural language processing, stores persistent chat history in a **Neon serverless PostgreSQL** database using **Drizzle ORM**, and handles secure user authentication via **ScaleKit** — making it enterprise-ready and scalable.
 
 ---
 
-## ✨ Features
+##  Features
 
-- 🧠 **AI-Powered Conversations** — Human-like responses via OpenAI API
-- 🕐 **24/7 Availability** — Always-on assistant with no downtime
-- 💬 **Persistent Chat History** — Conversations saved to Neon PostgreSQL via Drizzle ORM
-- 🔐 **Secure Authentication** — User login & session management via ScaleKit (SSO / OAuth)
-- 🎨 **Modern UI** — Built with shadcn/ui, Radix UI, and Tailwind CSS v4
-- 📱 **Fully Responsive** — Works seamlessly on desktop and mobile
-- 🌙 **Dark / Light Mode** — Theme toggling via `next-themes`
-- 📊 **Analytics Dashboard** — Chat insights powered by Recharts
-- ✅ **Form Validation** — React Hook Form + Zod schema validation
-- 🔔 **Toast Notifications** — Real-time feedback with Sonner & react-hot-toast
-- ⚡ **Serverless Ready** — Optimized for Vercel Edge deployment
+-  **AI-Powered Conversations** — Human-like responses via OpenAI API
+-  **24/7 Availability** — Always-on assistant with no downtime
+-  **Persistent Chat History** — Conversations saved to Neon PostgreSQL via Drizzle ORM
+-  **Secure Authentication** — User login & session management via ScaleKit (SSO / OAuth)
+-  **Dark / Light Mode** — Theme toggling via `next-themes`
+-  **Toast Notifications** — Real-time feedback with Sonner & react-hot-toast
+-  **Serverless Ready** — Optimized for Vercel Edge deployment
 
 ---
 
-## 🏗️ Tech Stack
+## Tech Stack
 
 | Category | Technology |
 |---|---|
@@ -85,7 +81,7 @@ Embedded-24-7-Human-Like-Assistant-Chatbot/
 
 ---
 
-## ✅ Prerequisites
+## Prerequisites
 
 Ensure the following are set up before proceeding:
 
@@ -148,7 +144,7 @@ DATABASE_URL=postgresql://user:password@ep-xxx.us-east-1.aws.neon.tech/dbname?ss
 OPENAI_API_KEY=sk-your_openai_api_key
 ```
 
-> ⚠️ Never commit `.env.local` to version control — it is already in `.gitignore`.
+>  Never commit `.env.local` to version control — it is already in `.gitignore`.
 
 ---
 
@@ -197,7 +193,7 @@ ScaleKit provides enterprise-grade authentication including **SSO**, **OAuth 2.0
 
 ---
 
-## 🔑 Environment Variables Reference
+## Environment Variables Reference
 
 | Variable | Description | Where to Get |
 |---|---|---|
@@ -210,7 +206,7 @@ ScaleKit provides enterprise-grade authentication including **SSO**, **OAuth 2.0
 
 ---
 
-## 🗄️ Database Commands
+## Database Commands
 
 | Command | Description |
 |---|---|
@@ -221,7 +217,7 @@ ScaleKit provides enterprise-grade authentication including **SSO**, **OAuth 2.0
 
 ---
 
-## 🧪 Available Scripts
+## Available Scripts
 
 | Script | Description |
 |---|---|
@@ -236,7 +232,7 @@ ScaleKit provides enterprise-grade authentication including **SSO**, **OAuth 2.0
 
 ---
 
-## 🌐 Deployment on Vercel
+## Deployment on Vercel
 
 1. Push your repository to GitHub
 2. Go to [vercel.com](https://vercel.com) and click **Add New Project**
@@ -255,14 +251,14 @@ vercel
 ---
 
 
-## 🛣️ Future Improvements
+##  Future Improvements
 
-- 🌐 **Multi-language support** for global users
-- 🗂️ **Multiple named chat sessions** with organization
-- 📎 **File & image upload** support within chat
-- 🔊 **Voice input / output** — speech-to-text & text-to-speech
-- 🔌 **Embeddable widget** — drop into any website with a `<script>` tag
-- 📊 **Advanced analytics** — conversation metrics and user behavior insights
+-  **Multi-language support** for global users
+-  **Multiple named chat sessions** with organization
+-  **File & image upload** support within chat
+-  **Voice input / output** — speech-to-text & text-to-speech
+-  **Embeddable widget** — drop into any website with a `<script>` tag
+-  **Advanced analytics** — conversation metrics and user behavior insights
 
 ---
 
