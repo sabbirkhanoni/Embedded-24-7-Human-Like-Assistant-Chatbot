@@ -4,7 +4,7 @@ import { Dialog, DialogContent, DialogTitle, DialogDescription } from '../ui/dia
 import { Globe, FileText, Upload, X, ArrowRight, Loader, AlertCircle } from 'lucide-react'
 import { Alert, AlertDescription } from '../ui/alert'
 import { validateURL } from '@/lib/validateURL';
-import { se } from 'date-fns/locale';
+
 
 
 interface PromptsModelProps {
@@ -98,9 +98,9 @@ export default function PromptsModel({ open, setOpen, existingSources , onImport
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="p-0 gap-0 max-w-[460px] w-full rounded-2xl border border-zinc-200 bg-white shadow-xl overflow-hidden">
+      <DialogContent className="p-0 gap-0 min-w-7xl h-[500px]  rounded-2xl border border-zinc-200 bg-white shadow-xl overflow-hidden">
 
-        <div className="px-7 pt-7 pb-0 relative">
+        <div className="px-7 pt-7 pb-0 h-full relative">
 
           <DialogTitle className="text-lg font-semibold text-zinc-900 tracking-tight mb-1">
             Create a Prompt
