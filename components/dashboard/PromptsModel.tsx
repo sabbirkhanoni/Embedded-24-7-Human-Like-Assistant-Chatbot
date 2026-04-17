@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from 'react'
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from '../ui/dialog'
 import { Globe, FileText, Upload, X, ArrowRight, Loader, AlertCircle } from 'lucide-react'

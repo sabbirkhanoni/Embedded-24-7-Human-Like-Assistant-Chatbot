@@ -5,6 +5,9 @@ import Docs from '@/components/landing/docs/index'
 import Pricing from '@/components/landing/pricing/index'
 import Footer from '@/components/landing/footer/index'
 import { Toaster } from 'react-hot-toast'
+import Contact from '@/components/contact/Contact'
+import Chatview from '@/components/chatview/Chatview'
+
 
 const Page = () => {
   return (
@@ -13,8 +16,10 @@ const Page = () => {
     >
       <Navbar />
       <Hero />
+      <Chatview />
       <Docs />
       <Pricing />
+      <Contact />
       <Footer />
 
       <Toaster

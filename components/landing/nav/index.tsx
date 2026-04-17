@@ -1,3 +1,4 @@
+
 import { AuthorizationGuard } from '@/lib/AuthorizationGuard'
 import Link from 'next/link'
 import React from 'react'
@@ -39,7 +40,6 @@ const Navbar = async () => {
           ) : (
             <div>
               <Link href={"/api/auth"} className="px-4 py-2 text-white transition-colors duration-200">Login</Link>
-              <Link href={"/api/auth"} className="ml-4 px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-green-700 transition-colors duration-200">Get Started</Link>
             </div>
           )
         }
