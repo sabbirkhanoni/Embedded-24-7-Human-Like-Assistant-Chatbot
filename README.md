@@ -4,7 +4,8 @@
 
 ## **The installation guide is provided below, after the User Interface (UI) section.**
 
-<img width="1920" height="3610" alt="screencapture-embedded-human-like-assistant-vercel-app-2026-04-12-20_57_15" src="https://github.com/user-attachments/assets/ff8923f6-e795-474c-8137-9510a351c2bd" />
+<img width="1920" height="4473" alt="screencapture-localhost-3000-2026-04-17-17_42_53" src="https://github.com/user-attachments/assets/d1c284a0-88aa-4413-aece-cd873e97d299" />
+
 
 <img width="1920" height="927" alt="screencapture-pichatbot-scalekit-dev-a-auth-login-2026-04-12-20_57_42" src="https://github.com/user-attachments/assets/cf29f57a-67b6-4430-a6fe-a6ea1bd46cf1" />
 
