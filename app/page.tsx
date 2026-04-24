@@ -21,9 +21,6 @@ const Page = () => {
       <Pricing />
       <Contact />
       <Footer />
-
-      
-      
     </main>
   )
 }
