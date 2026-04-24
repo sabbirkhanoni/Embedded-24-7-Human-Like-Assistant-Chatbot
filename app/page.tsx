@@ -22,20 +22,7 @@ const Page = () => {
       <Contact />
       <Footer />
 
-      <Toaster
-        position="top-center"
-        reverseOrder={false}
-        gutter={8}
-        containerStyle={{}}
-        containerClassName=""
-        toastOptions={{
-          duration: 5000,
-          style: {
-            background: "#363636",
-            color: "#fff",
-          },
-        }}
-      />
+      
       
     </main>
   )
