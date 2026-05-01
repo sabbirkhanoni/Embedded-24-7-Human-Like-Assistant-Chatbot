@@ -20,6 +20,7 @@ const ELEMENTS = [
   { label: "Customization", href: "/dashboard/customization", icon: Settings2Icon },
   { label: "Chats", href: "/dashboard/chats", icon: MessageCircle },
   { label: "Settings", href: "/dashboard/settings", icon: Settings },
+  { label: "Log Out", href: "/dashboard/logout", icon: icons.LogOut },
 ];
 
 const SidePannel = () => {

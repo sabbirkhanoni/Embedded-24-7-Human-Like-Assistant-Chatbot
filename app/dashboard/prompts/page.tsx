@@ -1,5 +1,6 @@
 "use client";
 import AxiosToastError from '@/app/utils/AxiosToastError';
+import PromptFullDetailsModel from '@/components/dashboard/PromptFullDetailsModel';
 import PromptsModel from '@/components/dashboard/PromptsModel';
 import PromptsView from '@/components/dashboard/PromptsView';
 import { Button } from '@/components/ui/button';
@@ -17,6 +18,9 @@ const Page = () => {
   const [modeType, setModeType] = useState<"website" | "text" | "file">("website");
   const [selectPromptSource, setSelectPromptSource] = useState<PromptSource | null>(null);
   const [sheetModelOpen, setSheetModelOpen] = useState(false);
+
+
+  const [detailsModelOpen, setDetailsModelOpen] = useState(false);
 
 
   useEffect(() => {
@@ -93,8 +97,6 @@ const Page = () => {
               handleOnSourceClick={handleOnSourceClick}
               loading={promptsSourcesLoading}
             />
-
-            
       </div>
     </div>
   )

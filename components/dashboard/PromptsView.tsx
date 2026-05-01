@@ -1,7 +1,12 @@
 import { Eye, EyeIcon, LucideEye, ScanEye, ViewIcon } from 'lucide-react'
-import React from 'react'
+import React, { useState } from 'react'
+import PromptFullDetailsModel from './PromptFullDetailsModel';
 
 const PromptsView = ({ sources , handleOnSourceClick, loading }: { sources: any[], handleOnSourceClick: (source: any) => void, loading: boolean }) => {
+
+  const [selectedSourceId, setSelectedSourceId] = useState<string | null>(null);
+  const [openFullDetails, setOpenFullDetails] = useState(false);
+
   return (
     <div className='text-black mt-4 overflow-y-auto max-h-56'>
         <table className="w-full text-left p-2 border border-gray-200 mb-4  ">
@@ -85,13 +90,27 @@ const PromptsView = ({ sources , handleOnSourceClick, loading }: { sources: any[
                                     )
                                 }
                                 <td className="border-b text-center p-2">
-                                    <button className='p-1 hover:bg-blue-300 rounded-full cursor-pointer' onClick={() => handleOnSourceClick(source)}><LucideEye /></button>
+                                    <button className='p-1 hover:bg-blue-300 rounded-full cursor-pointer' onClick={() => {
+                                        setSelectedSourceId(source.id);
+                                        setOpenFullDetails(true);
+                                    }}><LucideEye /></button>
                                 </td>
                             </tr>
                         ))}
                     </tbody>
                 )}
             </table>
+
+            {
+                openFullDetails && (
+                    console.log("Opening details for source ID:", selectedSourceId),
+                    <PromptFullDetailsModel
+                        source={sources.find(source => source.id === selectedSourceId) || null}
+                        detailsModelOpen={openFullDetails}
+                        setDetailsModelOpen={setOpenFullDetails}
+                    />
+                )
+            }
         </div>
   )
 }
