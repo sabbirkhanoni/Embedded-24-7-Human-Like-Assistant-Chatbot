@@ -17,8 +17,16 @@ const Hero = () => {
                     Experience the future of communication with our advanced AI technology.
                 </span>
                 <span className="text-xs font-medium text-gray-100 border border-gray-100 rounded-full px-3 py-1 mt-4 animate-pulse">
-                    Version 1.0 - Launching Soon!
+                    Ready to transform your customer interactions? <Send className='inline-block ml-2' size={16} />
                 </span>
+                <span className="text-xs font-medium text-gray-100 border border-gray-100 rounded-full px-3 py-1 mt-4 animate-pulse">
+                    Join the waitlist now!
+                </span>
+                <div>
+                    <p className="text-sm text-gray-300 mt-6">
+                        Sign up for early access and be the first to experience the power of PAI ChatBot. Don't miss out on this opportunity to revolutionize your conversations!
+                    </p>
+                </div>
             </div>
         </div>
         

@@ -7,9 +7,12 @@ import { Send } from 'lucide-react'
 const Chatview = () => {
   return (
     <section id="chatview" className=" max-h-screen max-w-8xl bg-gradient-to-r from-[#050508] via-[#1a1a1a] to-[#050508] py-1">
+        <h1 className="text-3xl font-bold text-center my-3">Chat Preview</h1>
       {/* Chat Preview */}
-        <div className="px-1">
-          <div className="mt-2 mx-auto relative w-full max-w-8xl">
+        <div className="px-1 ">
+            
+          <div className="mt-2 mx-auto relative w-full max-w-7xl">
+            
             <div className="bg-[#0f0f0f] px-4 space-y-4 p-2 border border-gray-700 w-full rounded-lg shadow-lg flex flex-col items-start animate-float animation-delay-4000 h-145">
                 <div className="flex bg-black w-full p-3 rounded-t-md items-center mb-2">
                     <div className="w-5 h-5 rounded-full bg-blue-600 mr-2"></div>

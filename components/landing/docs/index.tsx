@@ -1,5 +1,5 @@
 "use client";
-import { Copy } from "lucide-react";
+import { BatteryWarning, Copy, FileWarning } from "lucide-react";
 import React from "react";
 
 const Docs = () => {
@@ -14,8 +14,8 @@ const Docs = () => {
 
   return (
     <section id="docs" className="max-h-screen min-h-screen mx-auto">
-      <h2 className="text-4xl text-center font-bold p-4">Documentation</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 px-6 py-5 max-w-8xl mx-auto">
+      <h2 className="text-4xl text-center font-bold p-3">Documentation</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 px-12 py-4 max-w-8xl mx-auto">
         <div className="space-y-6">
           <h2 className="text-2xl font-bold">Documentation</h2>
           <p className="text-gray-600">
@@ -87,7 +87,8 @@ const Docs = () => {
             </div>
 
             <div className="flex text-sm items-center w-full min-w-0">
-              <div className="px-5 py-3 text-gray-400 overflow-hidden">
+              <div className="px-5 py-2 text-gray-400 overflow-hidden">
+                <p className="p-1 bg-red-500 text-white w-fit border-1 border-red-800 font-semibold rounded-full mb-2 px-3">To prevent unintended usage costs, this script is kept hidden.</p>
                 <div className="text-pink-500">&lt;Script&gt;</div>
                 <div className="text-green-400 text-sm break-words whitespace-normal pl-10">
                   src=https://www.pichatbot.com/q=long+url&oq=long+url&gs_lcrp

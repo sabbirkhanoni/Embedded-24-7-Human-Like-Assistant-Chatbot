@@ -52,7 +52,7 @@ export async function GET(request: NextRequest) {
         });
     }
 
-    const response = NextResponse.redirect(new URL("/", request.url));
+    const response = NextResponse.redirect(new URL("/dashboard", request.url));
 
     const userSession = {
         email : user.email,
