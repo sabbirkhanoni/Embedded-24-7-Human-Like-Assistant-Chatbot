@@ -15,9 +15,9 @@ const Docs = () => {
   return (
     <section id="docs" className="max-h-screen min-h-screen mx-auto">
       <h2 className="text-4xl text-center font-bold p-3">Documentation</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 px-12 py-4 max-w-8xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 px-12 py-1 max-w-8xl mx-auto">
         <div className="space-y-6">
-          <h2 className="text-2xl font-bold">Documentation</h2>
+          <h2 className="text-xl font-bold">Documentation</h2>
           <p className="text-gray-600">
             Welcome to the PAI ChatBot documentation. Here you will find all the
             information you need to get started.
@@ -54,7 +54,7 @@ const Docs = () => {
         </div>
 
         <div className="space-y-4">
-          <h3 className="text-4xl font-semibold">Implementations</h3>
+          <h3 className="text-xl font-semibold">Implementations</h3>
           <ul className="list-disc list-inside text-gray-600 space-y-2">
             <li className="">Build your Preference Customization</li>
             <li className="">Generate Embedded Scripts</li>
@@ -99,6 +99,26 @@ const Docs = () => {
             </div>
           </div>
         </div>
+
+        <div className="space-y-4">
+          <h3 className="text-xl font-semibold">Support</h3>
+          <p className="text-gray-600">
+            If you have any questions or need assistance, our support team is
+            here to help. Contact us through the support page or refer to the
+            FAQ section for common questions and troubleshooting tips.
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          <h3 className="text-xl font-semibold">Feedback</h3>
+          <p className="text-gray-600">
+            We value your feedback! If you have any suggestions or encounter any
+            issues, please don't hesitate to reach out to us. Your input helps
+            us improve our product and provide a better experience for all
+            users.
+          </p>
+        </div>
+
       </div>
     </section>
   );
