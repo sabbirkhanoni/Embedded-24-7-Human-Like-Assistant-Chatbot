@@ -1,41 +1,42 @@
     'use client'
-
-import AxiosToastError from '@/app/utils/AxiosToastError';
-import axios from 'axios';
-import { X } from 'lucide-react';
+    import AxiosToastError from '@/app/utils/AxiosToastError';
+    import TemplateTable from '@/components/template/TemplateTable';
+    import axios from 'axios';
+    import { X } from 'lucide-react';
     import React, { useEffect, useState } from 'react'
+    import toast from 'react-hot-toast';
 
     type TempStatus = "active" | "draft" | "disabled";
     type Tone = "strict" | "neutral" | "friendly" | "empathetic";
 
-    interface Template {
-    id: string;
-    name: string;
-    description: string;
-    sourceCount: string;
-    source_ids: string[];
-    tone: Tone;
-    scopeLabel: string;
-    allowed_topics?: string;
-    blocked_topics?: string;
-    status: TempStatus;
+    export interface Template {
+        id: string;
+        name: string;
+        description: string;
+        sourceCount: string;
+        source_ids: string[];
+        tone: Tone;
+        scopeLabel: string;
+        allowed_topics?: string;
+        blocked_topics?: string;
+        status: TempStatus;
     }
 
     interface PromptSource {
-    id: string;
-    name: string;
-    type: string;
-    status: string;
-    source_url: string;
+        id: string;
+        name: string;
+        type: string;
+        status: string;
+        source_url: string;
     }
 
     interface FieldProps {
-    name: string;
-    description: string;
-    tone: Tone;
-    allowedTopics?: string;
-    blockedTopics?: string;
-    fallbackBehavior: string;
+        name: string;
+        description: string;
+        tone: Tone;
+        allowedTopics?: string;
+        blockedTopics?: string;
+        fallbackBehavior: string;
     }
 
     const page = () => {
@@ -47,6 +48,7 @@ import { X } from 'lucide-react';
     const [loading, setLoading] = useState(false);
     const [saving, setSaving] = useState(false);
     const [loading1,setLoading1] = useState(true);
+    const [templates, setTemplates] = useState<Template[]>([]);
 
     const [formData, setFormData] = useState({
         name: "",
@@ -54,12 +56,63 @@ import { X } from 'lucide-react';
         tone: "neutral",
         allowedTopics: "",
         blockedTopics: "",
-        fallbackBehavior: "escalate"
+        fallbackBehavior: "escalate",
+        sourceIds: [],
     })
 
-    const handleOnSubmit : React.FormEventHandler<HTMLFormElement> = (e) => {
+    const handleOnSubmit : React.FormEventHandler<HTMLFormElement> = async (e) => {
         e.preventDefault();
-        
+        if(!formData.name || !formData.description || !formData.tone){
+            toast.error("Please fill in all required fields.");
+            return;
+        }
+        if(selectedSource.length === 0){
+            toast.error("Please select at least one prompt source.");
+            return;
+        }
+        try {
+            setSaving(true);
+            const response = await axios.post("/api/template/create", {
+                name: formData.name,
+                description: formData.description,
+                tone: formData.tone,
+                allowedTopics: formData.allowedTopics,
+                blockedTopics: formData.blockedTopics,
+                sourceIds: selectedSource,
+            })
+
+            console.log("Create template response:", response);
+
+            if (response.data?.success) {
+                toast.success("Template created successfully.");
+                handleReset();
+                setSelectedSource([]);
+                fetchTemplatesData();
+            } else {
+                toast.error("Failed to create template. Please try again.");
+            }
+        } catch (error) {
+            AxiosToastError(error);
+        } finally {
+            setSaving(false);
+        }
+    }
+
+    const fetchTemplatesData = async () => {
+        try {
+            setLoading(true);
+            const response = await axios.get("/api/template/get");
+            if(response.status !== 200){
+                toast.error("Failed to fetch templates. Please try again.");
+                return;
+            } else {
+                setTemplates(response.data.templates || []);
+            }
+        } catch (error) {
+            AxiosToastError(error);
+        } finally {
+            setLoading(false);
+        }
     }
 
     const handleReset = () => {
@@ -69,7 +122,8 @@ import { X } from 'lucide-react';
             tone: "neutral",
             allowedTopics: "",
             blockedTopics: "",
-            fallbackBehavior: "escalate"
+            fallbackBehavior: "escalate",
+            sourceIds: [],
         });
     }
 
@@ -90,7 +144,10 @@ import { X } from 'lucide-react';
     }
 
     useEffect(() => {
-        console.log("Fetching prompt sources2...", promptSource);
+        fetchTemplatesData();
+    }, [])
+
+    useEffect(() => {
         fetchPromptSources();
     }, [])
 
@@ -200,7 +257,9 @@ import { X } from 'lucide-react';
           </div>
           {/* Table */}
           <div>
-
+            <TemplateTable
+                templates={templates}
+            />
           </div>
         </div>
     </section>

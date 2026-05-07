@@ -14,7 +14,7 @@ export async function POST(request: NextRequest) {
         }
 
         const { name, description, tone, allowedTopics, blockedTopics, sourceIds } = await request.json();
-        if(!name || !description || !tone || !allowedTopics || !blockedTopics){
+        if(!name || !description || !tone){
             return NextResponse.json({
                 success: false,
                 error: "Please provide all required information",
@@ -33,8 +33,8 @@ export async function POST(request: NextRequest) {
             name,
             description,
             tone,
-            allowed_topics: allowedTopics || null,
-            blocked_topics: blockedTopics || null,
+            allowed_topics: allowedTopics || "",
+            blocked_topics: blockedTopics || "",
             source_ids: sourceIds,
             status: "active",
         });
