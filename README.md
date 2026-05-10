@@ -11,6 +11,9 @@
 
 <img width="1918" height="925" alt="image" src="https://github.com/user-attachments/assets/5f5e2439-c373-409c-95c6-6f7f37f29b38" />
 
+<img width="1892" height="928" alt="image" src="https://github.com/user-attachments/assets/2ef5151d-582c-4e91-94d8-2066a8089db6" />
+
+
 
 
 A modern, full-stack AI-powered chatbot application built with **Next.js 16**, **OpenAI**, **Drizzle ORM**, and **Neon PostgreSQL** — designed to deliver a human-like conversational experience around the clock. Secured with **ScaleKit** authentication and styled with **shadcn/ui** and **Tailwind CSS v4**.
