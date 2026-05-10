@@ -1,6 +1,6 @@
 #  Embedded 24/7 Human-Like Assistant Chatbot
 
-🔗 **Live Demo:** [embedded-24-7-human-like-assistant.vercel.app](https://embedded-24-7-human-like-assistant.vercel.app)
+🔗 **Live Demo:** [https://human-assist-ai.vercel.app](https://human-assist-ai.vercel.app)
 
 ## **The installation guide is provided below, after the User Interface (UI) section.**
 
