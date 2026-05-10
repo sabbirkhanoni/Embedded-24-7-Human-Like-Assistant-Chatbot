@@ -9,6 +9,9 @@
 
 <img width="1920" height="927" alt="screencapture-pichatbot-scalekit-dev-a-auth-login-2026-04-12-20_57_42" src="https://github.com/user-attachments/assets/cf29f57a-67b6-4430-a6fe-a6ea1bd46cf1" />
 
+<img width="1918" height="925" alt="image" src="https://github.com/user-attachments/assets/5f5e2439-c373-409c-95c6-6f7f37f29b38" />
+
+
 
 A modern, full-stack AI-powered chatbot application built with **Next.js 16**, **OpenAI**, **Drizzle ORM**, and **Neon PostgreSQL** — designed to deliver a human-like conversational experience around the clock. Secured with **ScaleKit** authentication and styled with **shadcn/ui** and **Tailwind CSS v4**.
 
